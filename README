@@ -1,0 +1,19 @@
+Polaris Slide Code Generator
+
+Written using AutoHotkey (www.autohotkey.com)
+
+This script is specific to the Polaris ILS portal page where things can be added for the library using it. It's basically the front page of the PAC, though this script could create code to add anywhere within the system. It's a simple script that generates the code necessary to add slides, or any other timed event, to the Polaris powered PAC site. Written in Autohotkey, you fill out the form to generate C# code for an ASPX page running in Polaris' ASP/.NET environment. The code generated is of this format:
+
+<% System.DateTime SLIDECODEStartDate = new System.DateTime(2015, 01, 01);
+   System.DateTime SLIDECODEEndDate = new System.DateTime(2015, 02, 27);
+   if (DateTime.Now > SLIDECODEStartDate && DateTime.Now < SLIDECODEEndDate) { %>
+                <a href="LINK TO URL OR EVENT"><img src="PATH TO SLIDE/SLIDENAME.JPG" width="740" border="0" alt="ALT TEXT"></a>
+<%}%>
+
+While this code is specific to my needs at the library I work for, modification to the generated code are pretty easy, just change the things you need to change. I'm happy to help with questions.
+
+Daniel Messer
+cyberpunklibrarian@gmail.com
+@bibrarian
+google.com/+DanielMesser
+
